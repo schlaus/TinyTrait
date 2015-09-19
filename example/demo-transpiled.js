@@ -50,9 +50,9 @@
 
 	var _interopRequireDefault = __webpack_require__(2)['default'];
 
-	var _srcTinyTraitJs = __webpack_require__(3);
+	var _TinyTraitJs = __webpack_require__(3);
 
-	var _srcTinyTraitJs2 = _interopRequireDefault(_srcTinyTraitJs);
+	var _TinyTraitJs2 = _interopRequireDefault(_TinyTraitJs);
 
 	var _SerializableJs = __webpack_require__(67);
 
@@ -62,7 +62,7 @@
 		function DemoClass() {
 			_classCallCheck(this, DemoClass);
 
-			_srcTinyTraitJs2['default'].acquire(this, _SerializableJs2['default']);
+			_TinyTraitJs2['default'].acquire(this, _SerializableJs2['default']);
 		}
 
 		DemoClass.prototype.testFunction = function testFunction() {
@@ -89,8 +89,8 @@
 	console.log(typeof serializedData.c === 'undefined');
 	console.log(typeof serializedData.testFunction === 'undefined');
 
-	console.log(_srcTinyTraitJs2['default'].hasTrait(demoObj, _SerializableJs2['default']));
-	console.log(_srcTinyTraitJs2['default'].hasTrait(demoObj, 'Serializable'));
+	console.log(_TinyTraitJs2['default'].hasTrait(demoObj, _SerializableJs2['default']));
+	console.log(_TinyTraitJs2['default'].hasTrait(demoObj, 'Serializable'));
 
 	console.log(_SerializableJs2['default'].existsIn(demoObj));
 
@@ -1502,9 +1502,9 @@
 
 	exports.__esModule = true;
 
-	var _srcTinyTraitJs = __webpack_require__(3);
+	var _TinyTraitJs = __webpack_require__(3);
 
-	var _srcTinyTraitJs2 = _interopRequireDefault(_srcTinyTraitJs);
+	var _TinyTraitJs2 = _interopRequireDefault(_TinyTraitJs);
 
 	var privateProperties = _Symbol('Private properties for Serializable-trait');
 
@@ -1569,7 +1569,7 @@
 		};
 
 		return Serializable;
-	})(_srcTinyTraitJs2['default']);
+	})(_TinyTraitJs2['default']);
 
 	exports['default'] = Serializable;
 	module.exports = exports['default'];

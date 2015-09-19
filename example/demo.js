@@ -1,4 +1,4 @@
-import TinyTrait from '../src/TinyTrait.js';
+import TinyTrait from '../TinyTrait.js';
 import Serializable from './Serializable.js';
 
 class DemoClass {

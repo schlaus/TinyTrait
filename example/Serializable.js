@@ -1,4 +1,4 @@
-import TinyTrait from '../src/TinyTrait.js';
+import TinyTrait from '../TinyTrait.js';
 
 let privateProperties = Symbol( 'Private properties for Serializable-trait' );
 
