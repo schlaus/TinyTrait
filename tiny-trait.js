@@ -6,7 +6,7 @@ export default class TinyTrait {
 		return TinyTrait.hasTrait( object, this );
 	}
 
-	static applyTo( implementor, overwrite ) {
+	static applyTo( implementor, overwrite, settings ) {
 
 		let propertyNames = Object.getOwnPropertyNames( this.prototype );
 		let i, propCount;
@@ -31,7 +31,7 @@ export default class TinyTrait {
 		implementor[ ttp ].traits.add( this.name );
 
 		if ( this.prototype.traitInitializer ) {
-			this.prototype.traitInitializer.apply( implementor );
+			this.prototype.traitInitializer.call( implementor, settings );
 		}
 	}
 
@@ -40,7 +40,13 @@ export default class TinyTrait {
 		let postInitializers = [];
 
 		for ( let trait of traits ) {
-			trait.applyTo( implementor );
+
+			if ( trait instanceof Array ) {
+				trait[ 0 ].applyTo( implementor, false, trait[ 1 ]);
+				trait = trait[ 0 ];
+			} else {
+				trait.applyTo( implementor );
+			}
 
 			if ( trait.prototype.traitPostInit ) {
 				postInitializers.push( trait.prototype.traitPostInit );
