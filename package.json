@@ -15,5 +15,6 @@
     "core-js": "^1.1.3",
     "webpack": "^1.12.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "main": "TinyTrait.js"
 }
