@@ -1,4 +1,4 @@
-let ttp = Symbol( 'TinyTrait properties' );
+let ttp = Symbol( 'tiny-trait properties' );
 
 export default class TinyTrait {
 
